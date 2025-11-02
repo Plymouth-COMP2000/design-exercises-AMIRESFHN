@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">comp 2000</string>
+
+    <string name="guest_caps">GUEST</string>
+    <string name="staff_caps">STAFF</string>
+    <string name="Done">Done</string>
+    <string name="Enter_code">Enter_code</string>
+    <string name="Authentication_Code">Authentication_Code</string>
+    <string name="back">back</string>
+    <string name="Sign_out">Sign_out</string>
+    <string name="Welcome_Amir">Welcome_Amir</string>
+</resources>
