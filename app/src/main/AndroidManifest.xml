@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Comp2000">
         <activity
+            android:name=".upload"
+            android:exported="false" />
+        <activity
+            android:name=".notifications"
+            android:exported="false" />
+        <activity
+            android:name=".notification"
+            android:exported="false" />
+        <activity
             android:name=".menu"
             android:exported="false" />
         <activity

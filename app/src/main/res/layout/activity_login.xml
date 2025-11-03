@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4F4">
@@ -27,12 +28,12 @@
             <!-- Back -->
             <ImageButton
                 android:id="@+id/btnBack"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_icon_outline"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/baseline_arrow_back_24"
                 android:contentDescription="Back"
                 android:padding="8dp"
-                app:srcCompat="@drawable/baseline_arrow_back_24"
+
                 app:tint="#212121"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,17 +84,19 @@
                 android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="username"
+                android:background="@drawable/borderbox"
+                android:inputType="textEmailAddress"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:inputType="textEmailAddress"
-                android:hint=""
-                app:layout_constraintTop_toBottomOf="@id/lblEmail"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textColorHint="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/borderbox"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="8dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblEmail"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <!-- Password label -->
             <TextView
@@ -141,15 +144,18 @@
                 android:id="@+id/tvForgot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="forgot password"
-                android:textColor="#2962FF"
-                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
                 android:clickable="true"
                 android:focusable="true"
+                android:text="forgot password"
+                android:textColor="#2962FF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:labelFor="@id/etPassword"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="20dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
