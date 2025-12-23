@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:contentDescription="@string/back"
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/outline_arrow_back_ios_24"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Notifications"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="#111111"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 1 -->
+    <TextView
+        android:id="@+id/tvDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/April_25"
+        android:textSize="16sp"
+        android:textColor="#111111"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_10_15_AM"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        android:layout_marginStart="26dp"
+        app:layout_constraintTop_toTopOf="@id/tvDate1"
+        app:layout_constraintStart_toEndOf="@id/tvDate1" />
+
+    <TextView
+        android:id="@+id/tvName1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Han_Lee"
+        android:textSize="16sp"
+        android:textColor="#111111"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toTopOf="@id/tvDate1"
+        app:layout_constraintStart_toEndOf="@id/tvTime1"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel1" />
+
+    <Button
+        android:id="@+id/btnCancel1"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:text="@string/Cancel"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#B00020"
+        android:background="#adadad"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintTop_toTopOf="@id/tvDate1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 2 -->
+    <TextView
+        android:id="@+id/tvDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/July_17"
+        android:textSize="16sp"
+        android:textColor="#111111"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDate1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_10_15_AM"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        android:layout_marginStart="26dp"
+        app:layout_constraintTop_toTopOf="@id/tvDate2"
+        app:layout_constraintStart_toEndOf="@id/tvDate2" />
+
+    <TextView
+        android:id="@+id/tvName2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Sarah_Jones"
+        android:textSize="16sp"
+        android:textColor="#111111"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/cancel_reservation_for_Han_lee"
+        app:layout_constraintTop_toTopOf="@id/tvDate2"
+        app:layout_constraintStart_toEndOf="@id/tvTime2"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel2" />
+
+    <Button
+        android:id="@+id/btnCancel2"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:text="@string/Cancel"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#b00020"
+        android:background="#adadad"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintTop_toTopOf="@id/tvDate2"
+        android:contentDescription="@string/cancel_reservation_for_sarah_jones"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Back -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:contentDescription="@string/back"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/outline_arrow_back_ios_24"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Reservations"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#111111"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"/>
+
+    <!-- Reservation row -->
+    <TextView
+        android:id="@+id/tvResInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/April_25__2026____7_00_PM"
+        android:textSize="12sp"
+        android:textColor="#111111"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnEdit"/>
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="#adadad"
+        android:text="@string/Edit"
+        android:textAllCaps="false"
+        android:textColor="#4E342E"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel"
+        app:layout_constraintTop_toTopOf="@id/tvResInfo" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:background="#ADADAD"
+        android:text="@string/Cancel"
+        android:textAllCaps="false"
+        android:textColor="#4E342E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResInfo" />
+
+    <!-- Book button -->
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:text="@string/Book"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        android:background="#adadad"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#adadad"
+        android:orientation="horizontal"
+        android:paddingHorizontal="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/Home"
+            android:src="@drawable/house_24"
+            app:tint="#111111" />
+
+        <ImageButton
+            android:id="@+id/btnCalendar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cal"
+            android:src="@drawable/cal"
+            app:tint="#111111" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
