@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Back -->
+
     <ImageButton
         android:id="@+id/btnBack"
         android:contentDescription="@string/back"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Select The Date -->
+
     <TextView
         android:id="@+id/tvSelectDate"
         android:layout_width="wrap_content"
@@ -34,7 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Day / Month / Year row -->
     <LinearLayout
         android:id="@+id/rowDate"
         android:layout_width="0dp"
@@ -103,7 +102,6 @@
             android:textColorHint="#111111"/>
     </LinearLayout>
 
-    <!-- Select The Time -->
     <TextView
         android:id="@+id/tvSelectTime"
         android:layout_width="wrap_content"
@@ -117,7 +115,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Time row -->
     <LinearLayout
         android:id="@+id/rowTime"
         android:layout_width="0dp"
@@ -160,7 +157,6 @@
             android:textColorHint="#111111"/>
     </LinearLayout>
 
-    <!-- BOOK button -->
     <Button
         android:id="@+id/btnBook"
         android:layout_width="220dp"
@@ -175,7 +171,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Bottom bar -->
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="425dp"

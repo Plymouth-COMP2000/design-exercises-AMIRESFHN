@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+
+
     <!-- Sign out (top-right) -->
     <TextView
         android:id="@+id/tvSignOut"

@@ -95,11 +95,15 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // ✅ Redirect AFTER login success
                 if ("staff".equalsIgnoreCase(u.usertype)) {
                     startActivity(new Intent(MainActivity.this, staff_dash.class));
                 } else if ("customer".equalsIgnoreCase(u.usertype)) {
-                    startActivity(new Intent(MainActivity.this, cusmenu.class));
+                    // Pass customer details to cusmenu
+                    Intent intent = new Intent(MainActivity.this, cusmenu.class);
+                    intent.putExtra("firstname", u.firstname);
+                    intent.putExtra("lastname", u.lastname);
+                    intent.putExtra("email", u.email);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Unknown user type", Toast.LENGTH_SHORT).show();
                     return;

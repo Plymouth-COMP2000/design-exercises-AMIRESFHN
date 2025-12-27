@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.TextView;
+import android.content.Intent;
+
 
 public class cusmenu extends AppCompatActivity {
 
@@ -20,5 +23,14 @@ public class cusmenu extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        TextView tvSignOut = findViewById(R.id.tvSignOut);
+
+        tvSignOut.setOnClickListener(v -> {
+            Intent intent = new Intent(cusmenu.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        });
+
     }
 }

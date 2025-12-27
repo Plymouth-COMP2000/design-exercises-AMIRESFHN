@@ -7,7 +7,19 @@
     android:id="@+id/cusmenu"
     android:background="#FFFFFF">
 
-    <!-- Back -->
+    <TextView
+        android:id="@+id/tvSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sign_out"
+        android:textColor="#B31313"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <ImageButton
         android:id="@+id/btnBack"
         android:contentDescription="@string/back"
@@ -190,5 +202,18 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    <Button
+        android:id="@+id/btnMakeReservation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Make_a_Reservation"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        android:background="#adadad"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
