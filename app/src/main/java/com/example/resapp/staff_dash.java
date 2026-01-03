@@ -8,9 +8,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.resapp.databinding.ActivityStaffDashBinding;
 import com.google.android.material.snackbar.Snackbar;
+import android.widget.Toast;
+import android.util.Log;
+
 
 public class staff_dash extends AppCompatActivity {
-
     private ActivityStaffDashBinding binding;
 
     @Override
@@ -18,7 +20,6 @@ public class staff_dash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityStaffDashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
 
 
         View includedLayout = findViewById(R.id.contentStaffDash);
@@ -32,12 +33,18 @@ public class staff_dash extends AppCompatActivity {
         });
 
 
+       contentBinding.btnManageMenu.setOnClickListener(v -> {
+           Log.d("STAFF_DASH", "Manage Menu Button Clicked");
+            Toast.makeText(staff_dash.this, "Manage Menu Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(staff_dash.this, foodmenu.class));
+        });
 
-        binding.fab.setOnClickListener(view ->
-                Snackbar.make(view, "FAB clicked", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null)
-                        .show()
-        );
+        binding.fab.setOnClickListener(view -> {
+            Snackbar.make(view, "FAB clicked", Snackbar.LENGTH_LONG)
+                    .setAnchorView(R.id.fab)
+                    .setAction("Action", null)
+                    .show();
+        });
     }
+
 }

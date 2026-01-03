@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Back -->
+
     <ImageButton
         android:id="@+id/btnBack"
         android:contentDescription="@string/back"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Title -->
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="20dp"/>
 
-    <!-- Reservation row -->
+
     <TextView
         android:id="@+id/tvResInfo"
         android:layout_width="0dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvResInfo" />
 
-    <!-- Book button -->
+
     <Button
         android:id="@+id/btnBook"
         android:layout_width="220dp"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Bottom bar -->
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"

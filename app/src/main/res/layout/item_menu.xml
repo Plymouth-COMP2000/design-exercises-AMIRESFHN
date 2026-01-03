@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/etMenuName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:hint="@string/Menu_Item"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        android:inputType="text"
+        android:autofillHints="name"
+        />
+
+    <EditText
+        android:id="@+id/etMenuPrice"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:hint="@string/hint_price"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        android:layout_marginStart="12dp"
+        android:autofillHints="postalAddress"/>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="32dp"
+        android:layout_height="48dp"
+        android:src="@drawable/outline_delete_24"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="@string/Delete"
+        android:layout_marginStart="12dp"/>
+</LinearLayout>

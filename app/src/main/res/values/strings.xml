@@ -61,4 +61,10 @@
     <string name="cal">cal</string>
     <string name="sign_up">Dont have an account? Sign up</string>
     <string name="Make_a_Reservation">Make a Reservation</string>
+    <string name="Menu_Item">Menu Item</string>
+    <string name="hint_price">£</string>
+    <string name="Delete">Delete</string>
+    <string name="email_fab_desc">Send email</string>
+    <string name="add_menu_item">add menu item</string>
+
 </resources>

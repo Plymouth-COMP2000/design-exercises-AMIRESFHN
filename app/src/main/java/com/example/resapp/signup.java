@@ -54,7 +54,7 @@ public class signup extends AppCompatActivity {
             return;
         }
 
-        // Split full name into first and last name
+
         String[] nameParts = fullName.split(" ", 2);
         String firstName = nameParts.length > 0 ? nameParts[0] : "";
         String lastName = nameParts.length > 1 ? nameParts[1] : "";
