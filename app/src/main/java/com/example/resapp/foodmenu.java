@@ -1,23 +1,19 @@
 package com.example.resapp;
 
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.resapp.model.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
+
 import androidx.activity.OnBackPressedCallback;
 import androidx.room.Room;
 import com.example.resapp.model.AppDatabase;
 import com.example.resapp.model.MenuItemEntity;
-
+import android.util.Log;
 
 
 
@@ -27,16 +23,22 @@ public class foodmenu extends AppCompatActivity {
     private MenuAdapter menuAdapter;
     private List<MenuItem> menuList = new ArrayList<>();
     private AppDatabase db;
-    private MenuItem menuEntityToMenuItem(MenuItemEntity entity) {
-        return new MenuItem(entity.name, entity.price);
-    }
 
     private MenuItem entityToMenuItem(MenuItemEntity entity) {
         return new MenuItem(entity.name, entity.price);
     }
 
-    private MenuItemEntity menuItemToEntity(MenuItem item) {
-        return new MenuItemEntity(item.name, item.price);
+    private void saveMenuChanges() {
+
+        db.menuItemDao().deleteAll();
+
+        for (MenuItem item : menuList) {
+            if (!item.name.trim().isEmpty() && item.price > 0) {
+                db.menuItemDao().insert(
+                        new MenuItemEntity(item.name, item.price)
+                );
+            }
+        }
     }
 
 
@@ -52,11 +54,15 @@ public class foodmenu extends AppCompatActivity {
 
 
         menuList.clear();
-
         List<MenuItemEntity> entities = db.menuItemDao().getAll();
         for (MenuItemEntity entity : entities) {
             menuList.add(entityToMenuItem(entity));
         }
+        Log.d("DEBUG", "Loaded menu size: " + menuList.size());
+        for (MenuItem item : menuList) {
+            Log.d("DEBUG", "Menu: " + item.name + " - " + item.price);
+        }
+
 
 
 
@@ -98,27 +104,6 @@ public class foodmenu extends AppCompatActivity {
         });
 
     }
-    private void saveMenuChanges() {
-
-
-        Iterator<MenuItem> it = menuList.iterator();
-        while (it.hasNext()) {
-            MenuItem item = it.next();
-            if (item.name.trim().isEmpty() || item.price <= 0) {
-                it.remove();
-            }
-        }
-
-
-        db.menuItemDao().deleteAll();
-
-
-        for (MenuItem item : menuList) {
-            db.menuItemDao().insert(menuItemToEntity(item));
-        }
-    }
-
-
 
 
 }

@@ -66,5 +66,10 @@
     <string name="Delete">Delete</string>
     <string name="email_fab_desc">Send email</string>
     <string name="add_menu_item">add menu item</string>
+    <string name="home">home</string>
+    <string name="calendar">calendar</string>
+    <string name="Minute">Minute</string>
+    <string name="Hour">Hour</string>
+
 
 </resources>
