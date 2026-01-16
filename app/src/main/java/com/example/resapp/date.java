@@ -10,6 +10,8 @@ import com.example.resapp.model.ReservationEntity;
 import androidx.room.Room;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.ImageButton;
+
 
 
 
@@ -64,6 +66,24 @@ public class date extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        ImageButton btnHome = findViewById(R.id.btnHome);
+        ImageButton btnCalendar = findViewById(R.id.btnCalendar);
+
+        btnHome.setOnClickListener(v -> {
+            Intent intent = new Intent(date.this, cusmenu.class);
+            intent.putExtra("username", username);
+            startActivity(intent);
+            finish();
+        });
+
+        btnCalendar.setOnClickListener(v -> {
+            Intent intent = new Intent(date.this, customer_rez_pg.class);
+            intent.putExtra("username", username);
+            startActivity(intent);
+            finish();
+        });
+
+
 
     }
 }
