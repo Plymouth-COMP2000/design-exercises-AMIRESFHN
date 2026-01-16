@@ -46,6 +46,10 @@
             android:exported="false"
             android:theme="@style/Theme.ResApp" />
         <activity
+            android:name=".StaffReservationListActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

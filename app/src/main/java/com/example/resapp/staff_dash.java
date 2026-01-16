@@ -38,6 +38,11 @@ public class staff_dash extends AppCompatActivity {
             Toast.makeText(staff_dash.this, "Manage Menu Clicked", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(staff_dash.this, foodmenu.class));
         });
+        contentBinding.btnViewReservations.setOnClickListener(v -> {
+            Intent intent = new Intent(staff_dash.this, StaffReservationListActivity.class);
+            startActivity(intent);
+        });
+
 
         binding.fab.setOnClickListener(view -> {
             Snackbar.make(view, "FAB clicked", Snackbar.LENGTH_LONG)

@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -7,23 +6,13 @@
     android:gravity="center_vertical">
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tvDate"
         android:layout_width="0dp"
         android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:text="Customer Name"
-        android:textSize="16sp"
-        android:textColor="#111111"/>
-
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
         android:text="Date"
         android:textSize="16sp"
-        android:textColor="#111111"
-        android:gravity="center"/>
+        android:textColor="#111111" />
 
     <TextView
         android:id="@+id/tvTime"
@@ -33,7 +22,7 @@
         android:text="Time"
         android:textSize="16sp"
         android:textColor="#111111"
-        android:gravity="center"/>
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btnCancel"
@@ -42,5 +31,6 @@
         android:text="Cancel"
         android:textColor="#B00020"
         android:background="#adadad"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
 </LinearLayout>
